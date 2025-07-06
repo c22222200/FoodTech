@@ -58,6 +58,9 @@
                 font-size: 0.875rem;
                 padding: 0.5rem;
             }
+            .slide {
+                min-height: 85vh;
+            }
         }
         
         /* --- 專為列印/匯出PDF的樣式 --- */
@@ -193,7 +196,7 @@
                 </div>
             </div>
 
-            <!-- New Slide 5: Product Showcase -->
+            <!-- Slide 5: Product Showcase -->
             <div class="slide">
                 <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">我們的未來智慧飲品工作站</h2>
                 <div class="mt-8 grid md:grid-cols-2 gap-8 items-center">
@@ -327,30 +330,114 @@
             <!-- New Slide 9: Unit Economics -->
             <div class="slide">
                 <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">可驗證的獲利能力：我們的單位經濟模型</h2>
+                <div class="mt-8 overflow-x-auto">
+                   <table>
+                        <thead class="bg-gray-100">
+                            <tr>
+                                <th class="w-1/4">指標</th>
+                                <th class="text-center">情境 A (低銷量)</th>
+                                <th class="text-center">情境 B (目標銷量)</th>
+                                <th class="text-center">情境 C (高銷量)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">日均銷售杯數</td>
+                                <td class="text-center">250 杯</td>
+                                <td class="text-center">350 杯</td>
+                                <td class="text-center">500 杯</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">平均單價 (新台幣)</td>
+                                <td class="text-center">$55</td>
+                                <td class="text-center">$55</td>
+                                <td class="text-center">$55</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">月營收 (新台幣)</td>
+                                <td class="text-center">$412,500</td>
+                                <td class="text-center">$577,500</td>
+                                <td class="text-center">$825,000</td>
+                            </tr>
+                            <tr class="bg-blue-50">
+                                <td class="font-bold text-blue-800" colspan="4">公司月度收入</td>
+                            </tr>
+                            <tr>
+                                <td>模組租賃/SaaS 費 (新台幣)</td>
+                                <td class="text-center">$10,000</td>
+                                <td class="text-center">$10,000</td>
+                                <td class="text-center">$10,000</td>
+                            </tr>
+                            <tr>
+                                <td>月保養費用</td>
+                                <td class="text-center">$6,000</td>
+                                <td class="text-center">$6,000</td>
+                                <td class="text-center">$6,000</td>
+                            </tr>
+                             <tr>
+                                <td>營收抽成 (假設 5%)</td>
+                                <td class="text-center">$20,625</td>
+                                <td class="text-center">$28,875</td>
+                                <td class="text-center">$41,250</td>
+                            </tr>
+                             <tr class="bg-gray-100 font-bold">
+                                <td>公司總月收入 (新台幣)</td>
+                                <td class="text-center">$36,625</td>
+                                <td class="text-center">$44,875</td>
+                                <td class="text-center">$57,250</td>
+                            </tr>
+                            <tr>
+                                <td>預估月度變動成本 (原料/維護)</td>
+                                <td class="text-center">-$4,000</td>
+                                <td class="text-center">-$7,500</td>
+                                <td class="text-center">-$11,000</td>
+                            </tr>
+                            <tr class="bg-green-100 font-bold">
+                                <td>公司月度毛利 (新台幣)</td>
+                                <td class="text-center text-green-700">$32,625</td>
+                                <td class="text-center text-green-700">$37,375</td>
+                                <td class="text-center text-green-700">$46,250</td>
+                            </tr>
+                             <tr class="bg-blue-100 font-bold">
+                                <td>硬體資本回收期 (月)</td>
+                                <td class="text-center text-blue-700">約 9.2 個月</td>
+                                <td class="text-center text-blue-700">約 8.0 個月</td>
+                                <td class="text-center text-blue-700">約 6.5 個月</td>
+                            </tr>
+                        </tbody>
+                   </table>
+                </div>
+                 <p class="text-xs text-gray-500 mt-2">*註：此為簡化模型，未計入研發、行政等間接費用，且營收抽成比例僅為假設。旨在說明不同營運表現對資本回收速度的影響。</p>
+            </div>
+            
+            <!-- New Slide 10: Unit Economics (Target Scenario) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">可驗證的獲利能力：單位經濟模型 (目標情境)</h2>
                 <div class="mt-8 grid md:grid-cols-2 gap-8">
                     <div class="bg-gray-50 p-6 rounded-lg">
                         <h3 class="text-xl font-bold text-gray-900">單機投入成本 (Capex + CAC)</h3>
                         <ul class="mt-4 space-y-2">
-                            <li class="flex justify-between"><span>硬體製造成本 (BOM):</span> <span>NT$ 450,000</span></li>
+                            <li class="flex justify-between"><span>硬體製造成本 (BOM):</span> <span>NT$ 250,000</span></li>
                             <li class="flex justify-between"><span>客戶獲取與建置成本 (CAC):</span> <span>NT$ 50,000</span></li>
-                            <li class="flex justify-between border-t pt-2 mt-2 font-bold"><span>單機初期總投入:</span> <span>NT$ 500,000</span></li>
+                            <li class="flex justify-between border-t pt-2 mt-2 font-bold"><span>單機初期總投入:</span> <span>NT$ 300,000</span></li>
                         </ul>
                     </div>
                     <div class="bg-gray-50 p-6 rounded-lg">
-                        <h3 class="text-xl font-bold text-gray-900">單機月收入與回收 (高人流點位目標)</h3>
+                        <h3 class="text-xl font-bold text-gray-900">單機月收入與回收 (目標銷量情境 B)</h3>
                         <ul class="mt-4 space-y-2">
-                            <li class="flex justify-between"><span>月租/服務費:</span> <span>NT$ 20,000</span></li>
-                            <li class="flex justify-between"><span>營收分潤 (20%):</span> <span>NT$ 63,000</span></li>
-                            <li class="text-xs text-gray-500 text-right">日均150杯 x 均價NT$70 x 30天 x 20%</li>
-                             <li class="flex justify-between border-t pt-2 mt-2"><span>食機月收入:</span> <span>NT$ 83,000</span></li>
-                            <li class="flex justify-between"><span>每月變動成本 (物料/維護):</span> <span>- NT$ 25,000</span></li>
-                            <li class="flex justify-between border-t pt-2 mt-2 font-bold"><span>單機每月毛利:</span> <span>NT$ 58,000</span></li>
+                            <li class="flex justify-between"><span>月租/SaaS費:</span> <span>NT$ 10,000</span></li>
+                            <li class="flex justify-between"><span>月保養費用:</span> <span>NT$ 6,000</span></li>
+                            <li class="flex justify-between"><span>營收分潤 (5%):</span> <span>NT$ 28,875</span></li>
+                            <li class="text-xs text-gray-500 text-right">日均350杯 x 均價NT$55 x 30天 x 5%</li>
+                             <li class="flex justify-between border-t pt-2 mt-2"><span>公司總月收入:</span> <span>NT$ 44,875</span></li>
+                            <li class="flex justify-between"><span>預估月度變動成本:</span> <span>- NT$ 7,500</span></li>
+                            <li class="flex justify-between border-t pt-2 mt-2 font-bold"><span>公司月度毛利:</span> <span>NT$ 37,375</span></li>
                         </ul>
                     </div>
                 </div>
                 <div class="mt-8 bg-blue-600 text-white text-center p-4 rounded-lg">
-                    <h3 class="text-2xl font-bold">資本回收期: NT$ 500,000 / NT$ 58,000 = 8.6 個月</h3>
-                    <p class="text-sm opacity-80 mt-1">*此模型為驗證年核心目標，用以證明商業模式在最佳情境下的獲利潛力。</p>
+                    <h3 class="text-2xl font-bold">資本回收期: NT$ 500,000 / NT$ 37,375 = 約 8.0 個月</h3>
+                    <p class="text-sm opacity-80 mt-1">*此為目標銷量情境下的預估模型，作為我們營運的核心目標。</p>
                 </div>
             </div>
 
@@ -476,7 +563,7 @@
                                 </tr>
                                 <tr>
                                     <td class="font-bold">單機資本回收</td>
-                                    <td class="text-blue-600 font-bold text-center" colspan="3">&lt; 9 個月 <span class="text-xs text-gray-500 font-normal">*基於高人流點位的單位經濟模型預估 (詳見 P.9)</span></td>
+                                    <td class="text-blue-600 font-bold text-center" colspan="3">&lt; 9 個月 <span class="text-xs text-gray-500 font-normal">*基於高人流點位的單位經濟模型預估 (詳見 P.9 & 10)</span></td>
                                 </tr>
                             </tbody>
                         </table>
