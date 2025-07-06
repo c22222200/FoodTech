@@ -92,10 +92,10 @@
             <!-- Slide 1: 封面 -->
             <div class="slide active">
                 <div class="flex flex-col items-center justify-center text-center h-full min-h-[75vh]">
-                    <img src="/images/logo.png" alt="食機智慧製造 Logo" class="max-h-48 w-auto mb-8" onerror="this.onerror=null;this.src='/images/logo.png';">
+                    <img src="/images/logo.png" alt="食機智慧製造 Logo" class="max-h-48 w-auto mb-8" onerror="this.onerror=null;this.src='https://storage.googleapis.com/gemini-generative-ai-public/images/99/3a/0225/3277114b300951b1f148f4b7';">
                     <p class="text-2xl md:text-3xl font-light text-blue-600 mt-4">定義明日餐飲業的全新標準</p>
                     <div class="mt-12 flex flex-col sm:flex-row gap-4 print-hidden">
-                        <a href="#" id="bp-link-1" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                        <a href="bd.pdf" id="bp-link-1" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
                             完整募資計劃書
                         </a>
                         <a href="#" id="equity-link-1" class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300">
@@ -464,7 +464,7 @@
                     <div class="text-center pt-6">
                         <p class="text-xl font-semibold text-gray-800">這不僅是對一家公司的投資，而是投資於定義下一代餐飲業基礎設施的機會。</p>
                          <div class="mt-8 flex flex-col sm:flex-row gap-4 justify-center print-hidden">
-                            <a href="#" id="bp-link-2" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
+                            <a href="bd.pdf" id="bp-link-2" target="_blank" rel="noopener noreferrer" class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg hover:bg-blue-700 transition duration-300">
                                 完整募資計劃書
                             </a>
                             <a href="#" id="equity-link-2" class="bg-gray-200 text-gray-800 font-bold py-3 px-6 rounded-lg hover:bg-gray-300 transition duration-300">
@@ -550,9 +550,8 @@
             e.preventDefault();
             alert(`此處將連結至「${fileName}」文件。\n請在正式版本中替換為實際文件連結。`);
         }
-        document.getElementById('bp-link-1').addEventListener('click', (e) => handleLinkClick(e, '募資計劃書'));
+        
         document.getElementById('equity-link-1').addEventListener('click', (e) => handleLinkClick(e, '股權規劃書'));
-        document.getElementById('bp-link-2').addEventListener('click', (e) => handleLinkClick(e, '募資計劃書'));
         document.getElementById('equity-link-2').addEventListener('click', (e) => handleLinkClick(e, '股權規劃書'));
 
 
