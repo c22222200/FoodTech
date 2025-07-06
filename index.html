@@ -51,11 +51,6 @@
                 #6b7280 90% 100%     /* 行政 10% */
             );
         }
-        /* 長條圖動畫 */
-        .bar {
-            height: 0%; /* 初始高度為 0 */
-            transition: height 1s ease-in-out;
-        }
         
         /* 讓行動裝置上的表格更好看 */
         @media (max-width: 768px) {
@@ -353,51 +348,37 @@
             <!-- Slide 10: 財務預測 -->
             <div class="slide">
                 <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">財務預測亮點</h2>
-                <div class="grid md:grid-cols-2 gap-8 items-start">
-                    <div class="overflow-x-auto mt-6">
-                         <p class="text-lg text-gray-600 mb-4">本預測基於務實的部署里程碑，展示商業模式的健康度與規模化潛力。</p>
+                <div class="mt-6">
+                    <p class="text-lg text-gray-600 mb-4">本預測基於務實的部署里程碑，展示商業模式的健康度與規模化潛力。</p>
+                    <div class="overflow-x-auto">
                         <table>
                             <thead>
                                 <tr>
                                     <th>指標</th>
-                                    <th class="text-center">年/目標</th>
+                                    <th class="text-center">第一年 (驗證年)</th>
+                                    <th class="text-center">第二年 (擴張年)</th>
+                                    <th class="text-center">第三年 (規模化年)</th>
                                 </tr>
                             </thead>
                             <tbody>
                                 <tr>
                                     <td class="font-bold">累計部署數</td>
-                                    <td>第一年: 15 台<br>第二年: 100 台<br>第三年: 350+ 台</td>
+                                    <td class="text-center font-semibold">15 台</td>
+                                    <td class="text-center font-semibold">100 台</td>
+                                    <td class="text-center font-semibold">350+ 台</td>
                                 </tr>
                                 <tr>
                                     <td class="font-bold">核心目標</td>
-                                    <td>驗證模型 → 擴大營收 → 實現盈利</td>
+                                    <td>驗證模型</td>
+                                    <td>擴大營收</td>
+                                    <td>實現盈利</td>
                                 </tr>
                                 <tr>
                                     <td class="font-bold">單機資本回收</td>
-                                    <td class="text-blue-600 font-bold">&lt; 9 個月</td>
+                                    <td class="text-blue-600 font-bold text-center" colspan="3">&lt; 9 個月</td>
                                 </tr>
                             </tbody>
                         </table>
-                    </div>
-                    <div class="mt-6">
-                        <h3 class="text-xl font-bold text-center text-gray-800 mb-4">累計部署數增長預測</h3>
-                        <div id="bar-chart" class="w-full h-64 bg-gray-50 p-4 rounded-lg flex justify-around items-end gap-4">
-                            <div class="text-center">
-                                <div class="bar bg-blue-400 w-12 md:w-16 rounded-t-lg" data-height="15%"></div>
-                                <p class="text-sm font-bold mt-2">15台</p>
-                                <p class="text-xs text-gray-500">第一年</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="bar bg-blue-500 w-12 md:w-16 rounded-t-lg" data-height="60%"></div>
-                                <p class="text-sm font-bold mt-2">100台</p>
-                                <p class="text-xs text-gray-500">第二年</p>
-                            </div>
-                            <div class="text-center">
-                                <div class="bar bg-blue-600 w-12 md:w-16 rounded-t-lg" data-height="100%"></div>
-                                <p class="text-sm font-bold mt-2">350+台</p>
-                                <p class="text-xs text-gray-500">第三年</p>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -524,25 +505,6 @@
         let currentSlide = 0;
         const totalSlides = slides.length;
 
-        // 長條圖動畫處理
-        const barChartObserver = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    const bars = entry.target.querySelectorAll('.bar');
-                    bars.forEach(bar => {
-                        bar.style.height = bar.dataset.height;
-                    });
-                    // 動畫觸發後可以停止觀察以節省資源
-                    barChartObserver.unobserve(entry.target);
-                }
-            });
-        }, { threshold: 0.5 }); // 當元素 50% 可見時觸發
-
-        const barChartElement = document.getElementById('bar-chart');
-        if (barChartElement) {
-            barChartObserver.observe(barChartElement);
-        }
-
         // 更新投影片顯示的函式
         function updateSlides() {
             // 隱藏所有投影片
@@ -598,4 +560,4 @@
         updateSlides();
     </script>
 </body>
-</ht
+</html>
