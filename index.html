@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html lang="zh-Hant">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>食機智慧製造：募資簡報 (視覺強化版)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+TC:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Noto Sans TC', sans-serif;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        .slide {
+            display: none;
+            min-height: 75vh; /* 確保投影片有足夠高度 */
+        }
+        .slide.active {
+            display: block;
+        }
+        /* 自訂表格樣式 */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 1.5rem;
+        }
+        th, td {
+            border: 1px solid #e2e8f0;
+            padding: 0.75rem 1rem;
+            text-align: left;
+        }
+        th {
+            background-color: #f8fafc;
+            font-weight: 700;
+        }
+        td {
+            background-color: #ffffff;
+        }
+        /* 讓行動裝置上的表格更好看 */
+        @media (max-width: 768px) {
+            th, td {
+                font-size: 0.875rem;
+                padding: 0.5rem;
+            }
+        }
+        
+        /* --- 新增：專為列印/匯出PDF的樣式 --- */
+        @media print {
+            body, .w-full.max-w-5xl {
+                margin: 0 !important;
+                padding: 0 !important;
+                box-shadow: none !important;
+                border: none !important;
+            }
+            .slide {
+                display: block !important; /* 在列印時顯示所有投影片 */
+                page-break-after: always;  /* 每張投影片強制換頁 */
+                min-height: auto;
+                padding: 2rem 0; /* 給予上下一些空間 */
+            }
+            .slide:last-child {
+                page-break-after: avoid; /* 最後一頁後面不要換頁 */
+            }
+            /* 在列印時隱藏導覽控制按鈕 */
+            .print-hidden {
+                display: none !important;
+            }
+        }
+    </style>
+</head>
+<body class="bg-gray-100 flex items-center justify-center min-h-screen p-4">
+
+    <div class="w-full max-w-5xl bg-white rounded-2xl shadow-2xl overflow-hidden">
+        <!-- 投影片容器 -->
+        <div id="presentation-container" class="p-6 md:p-12">
+            <!-- Slide 1: 封面 -->
+            <div class="slide active">
+                <div class="flex flex-col items-center justify-center text-center h-full min-h-[75vh]">
+                    <div class="w-24 h-24 bg-blue-600 rounded-full mb-6 flex items-center justify-center">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-12 w-12 text-white" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2">
+                          <path stroke-linecap="round" stroke-linejoin="round" d="M11 4a2 2 0 114 0v1a1 1 0 001 1h3a1 1 0 011 1v3a1 1 0 01-1 1h-1a2 2 0 100 4h1a1 1 0 011 1v3a1 1 0 01-1 1h-3a1 1 0 01-1-1v-1a2 2 0 10-4 0v1a1 1 0 01-1 1H7a1 1 0 01-1-1v-3a1 1 0 00-1-1H4a2 2 0 110-4h1a1 1 0 001-1V7a1 1 0 011-1h3a1 1 0 001-1V4z" />
+                        </svg>
+                    </div>
+                    <h1 class="text-4xl md:text-5xl font-bold text-gray-800">食機智慧製造股份有限公司</h1>
+                    <p class="text-xl md:text-2xl text-gray-600 mt-2">(FoodTech Smart Manufacturing Inc.)</p>
+                    <p class="text-2xl md:text-3xl font-light text-blue-600 mt-8">定義明日餐飲業的全新標準</p>
+                </div>
+            </div>
+
+            <!-- Slide 2: 機會 (視覺強化) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">機會：一場無法迴避的完美風暴</h2>
+                <div class="mt-8 grid md:grid-cols-2 gap-8 items-start">
+                    <!-- 左側文字 -->
+                    <div class="space-y-6 text-lg text-gray-700">
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">系統性勞動力危機</h3>
+                            <p class="mt-2">餐飲業正遭遇普遍性人力短缺與高流動率的結構性困境，傳統人力模式已瀕臨崩潰。</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">痛點的再定義</h3>
+                            <p class="mt-2">業者真正的夢魘是「不穩定性」所導致的品質失控與規模化瓶頸，迫切需要<span class="text-blue-600 font-semibold">「穩定即服務」</span>。</p>
+                        </div>
+                         <div>
+                            <h3 class="font-bold text-xl text-gray-900">巨大的灘頭堡市場</h3>
+                            <p class="mt-2">全球手搖飲市場規模預計於2032年達到$65億美元，台灣本地市場已是年營收破千億的成熟經濟體。</p>
+                        </div>
+                    </div>
+                    <!-- 右側圖表 -->
+                    <div class="space-y-8">
+                        <!-- 勞動力危機圖表 -->
+                        <div>
+                            <p class="text-center font-semibold text-gray-700">台灣餐飲業勞動力困境</p>
+                            <div class="flex justify-around items-end mt-2 h-32">
+                                <div class="text-center">
+                                    <div class="w-16 bg-red-400 rounded-t-lg" style="height: 61.5%;"></div>
+                                    <p class="text-sm font-bold mt-1">61.5%</p>
+                                    <p class="text-xs text-gray-500">人力短缺</p>
+                                </div>
+                                <div class="text-center">
+                                    <div class="w-16 bg-red-300 rounded-t-lg" style="height: 55.6%;"></div>
+                                    <p class="text-sm font-bold mt-1">55.6%</p>
+                                    <p class="text-xs text-gray-500">高流動率</p>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- 市場規模圖表 -->
+                        <div>
+                             <p class="text-center font-semibold text-gray-700">全球手搖飲市場增長預測</p>
+                             <div class="relative h-32 mt-2">
+                                <svg class="w-full h-full" viewBox="0 0 100 100" preserveAspectRatio="none">
+                                    <path d="M 0 80 Q 25 70, 50 50 T 100 20" stroke="#3b82f6" stroke-width="3" fill="none" />
+                                    <text x="0" y="98" font-size="8" fill="gray">2024</text>
+                                    <text x="85" y="18" font-size="8" fill="gray">2032</text>
+                                    <text x="80" y="40" font-size="10" fill="#3b82f6" font-weight="bold">$65億</text>
+                                </svg>
+                             </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 3: 解決方案 (視覺強化) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">解決方案：自動化、雲端管理的 RaaS 平台</h2>
+                <div class="mt-8">
+                    <div class="bg-gray-50 p-6 rounded-lg border-l-4 border-blue-500">
+                        <p class="text-xl italic text-gray-800">我們的核心理念：「我們不是販賣一台機器，而是在建立一套<span class="font-bold">'餐廳即服務 (Restaurant-as-a-Service)'</span>的營運平台。」</p>
+                    </div>
+                    <!-- 新增圖示化說明 -->
+                    <div class="mt-10 grid md:grid-cols-3 gap-8 text-center">
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M10.325 4.317c.426-1.756 2.924-1.756 3.35 0a1.724 1.724 0 002.573 1.066c1.543-.94 3.31.826 2.37 2.37a1.724 1.724 0 001.065 2.572c1.756.426 1.756 2.924 0 3.35a1.724 1.724 0 00-1.066 2.573c.94 1.543-.826 3.31-2.37 2.37a1.724 1.724 0 00-2.572 1.065c-.426 1.756-2.924 1.756-3.35 0a1.724 1.724 0 00-2.573-1.066c-1.543.94-3.31-.826-2.37-2.37a1.724 1.724 0 00-1.065-2.572c-1.756-.426-1.756-2.924 0-3.35a1.724 1.724 0 001.066-2.573c-.94-1.543.826-3.31 2.37-2.37.996.608 2.296.096 2.572-1.065z" /><path stroke-linecap="round" stroke-linejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" /></svg>
+                            </div>
+                            <h3 class="font-bold text-xl mt-4 text-gray-900">全自動化</h3>
+                            <p class="mt-2 text-gray-700">7x24小時無人化營運，解決人力依賴。</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M3 15a4 4 0 004 4h9a5 5 0 10-.1-9.999 5.002 5.002 0 10-9.78 2.096A4.001 4.001 0 003 15z" /></svg>
+                            </div>
+                            <h3 class="font-bold text-xl mt-4 text-gray-900">雲端管理</h3>
+                            <p class="mt-2 text-gray-700">遠端監控、預測性維護與數據驅動決策。</p>
+                        </div>
+                        <div class="flex flex-col items-center">
+                            <div class="w-20 h-20 bg-blue-100 rounded-full flex items-center justify-center">
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-10 w-10 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="2"><path stroke-linecap="round" stroke-linejoin="round" d="M20 7l-8-4-8 4m16 0l-8 4m8-4v10l-8 4m0-10L4 7m8 4v10M4 7v10l8 4" /></svg>
+                            </div>
+                            <h3 class="font-bold text-xl mt-4 text-gray-900">模組化設計</h3>
+                            <p class="mt-2 text-gray-700">無縫擴展至炸物、滷味等，打造生態平台。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 4: 獨特價值主張 -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">獨特價值主張 (UVP)</h2>
+                <div class="overflow-x-auto mt-8">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th class="w-1/4">特性維度</th>
+                                <th class="w-1/2 text-blue-600">食機智慧製造</th>
+                                <th>主要競爭對手 (如 Botrista)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">產品品質</td>
+                                <td class="bg-blue-50">自動化現煮茶，堅持使用新鮮原料，迎合全球健康趨勢。</td>
+                                <td>糖漿基底，為追求多樣性而犧牲了品質與天然風味。</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">營運穩定性</td>
+                                <td class="bg-blue-50">不停機維修系統 (By-Pass System)，源自半導體級可靠性工程，最大化營運時間與客戶營收。</td>
+                                <td>傳統被動式叫修服務，設備停機即意味著營收損失。</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">部署場景</td>
+                                <td class="bg-blue-50">4坪微型店面，可被部署於過去無法開店的高價值、高人流場域，創造全新的增量營收。</td>
+                                <td>仍需依賴傳統店面的後場空間與人力進行輔助操作。</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+
+            <!-- Slide 5: 護城河 -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">牢不可破的護城河：By-Pass 不停機維修系統</h2>
+                <div class="mt-8 space-y-4 text-lg text-gray-700">
+                    <p><strong class="text-gray-900">概念：</strong>所有關鍵組件均採「冗餘設計」。當主系統運作異常時，雲端大腦會在毫秒之間自動將工作流程無縫切換至備用組件，服務從不中斷。</p>
+                    <p><strong class="text-gray-900">起源：</strong>此設計哲學源於技術長廖育烽在台積電 (TSMC) 負責全球最頂尖 ASML EUV 光刻機的工程經驗——為極致可靠性而生。這是一場對傳統餐飲設備業的<span class="text-blue-600 font-semibold">「降維打擊」</span>。</p>
+                    <p><strong class="text-gray-900">商業影響：</strong>將 HaaS 模式最大的財務風險（高昂的維護成本與停機損失）轉化為最強的競爭優勢，是支撐穩定經常性收入與高估值的盈利引擎。</p>
+                    <p><strong class="text-gray-900">IP 保護：</strong>已規劃為整體架構與演算法申請多項發明與實用新型專利，並已規劃與理律法律事務所合作，建立深厚的法律壁壘。</p>
+                </div>
+            </div>
+
+            <!-- Slide 6: 商業模式 (視覺強化) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">商業模式：高客戶價值 HaaS/SaaS 模型</h2>
+                <div class="mt-8 grid md:grid-cols-2 gap-8 items-center">
+                    <!-- 左側文字 -->
+                    <div class="space-y-6 text-lg text-gray-700">
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">客戶端價值</h3>
+                            <p class="mt-2">提供<strong class="text-blue-600">「零前期設備費用」</strong>方案，將高風險的資本支出 (CapEx) 轉化為靈活、可控的營運支出 (OpEx)。</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">公司端收入</h3>
+                            <p class="mt-2">創造穩定、可預測的經常性收入流 (Recurring Revenue)。</p>
+                        </div>
+                         <div>
+                            <h3 class="font-bold text-xl text-gray-900">利益高度一致</h3>
+                            <p class="mt-2">將食機的成功與客戶的成功深度綁定，創造共生共榮的長期夥伴關係。</p>
+                        </div>
+                    </div>
+                    <!-- 右側圖表 -->
+                    <div class="bg-gray-50 p-6 rounded-lg border border-gray-200">
+                        <h3 class="text-center font-bold text-xl text-gray-800">價值循環模型</h3>
+                        <div class="mt-4 space-y-4">
+                            <!-- 客戶端 -->
+                            <div class="text-center">
+                                <p class="font-semibold">客戶</p>
+                                <div class="bg-red-100 text-red-700 p-2 rounded-lg inline-block">高資本支出 (CapEx)</div>
+                                <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6 mx-auto my-1 text-gray-400" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 14l-7 7m0 0l-7-7m7 7V3" /></svg>
+                                <div class="bg-green-100 text-green-700 p-2 rounded-lg inline-block">營運支出 (OpEx)</div>
+                            </div>
+                            <!-- 公司端 -->
+                             <div class="text-center">
+                                <p class="font-semibold">食機智慧</p>
+                                <div class="bg-blue-100 text-blue-700 p-2 rounded-lg">
+                                    <p>經常性收入 (MRR)</p>
+                                    <p class="text-xs">(月租費, SaaS費, 營收抽成)</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Slide 7: 市場進入與增長策略 (視覺強化) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">市場進入與增長策略</h2>
+                <div class="mt-8 grid md:grid-cols-2 gap-8 items-center">
+                    <!-- 左側文字 -->
+                    <div class="space-y-4 text-lg text-gray-700">
+                        <ol class="list-decimal list-inside space-y-2">
+                            <li><strong class="text-gray-900">灘頭堡 (0-12月)：</strong>與 2-3 個品牌合作部署 10-15 台設備，驗證模型。</li>
+                            <li><strong class="text-gray-900">擴張期 (12-24月)：</strong>打入大型連鎖品牌，快速擴大部署規模。</li>
+                            <li><strong class="text-gray-900">平台化 (24月+)：</strong>演化為開放的餐飲自動化基礎設施平台。</li>
+                        </ol>
+                    </div>
+                    <!-- 右側圖表 -->
+                    <div class="flex justify-center items-center">
+                        <div class="relative w-64 h-64">
+                            <svg class="animate-spin" style="animation-duration: 20s;" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+                                <path id="circlePath" fill="none" stroke-width="4" stroke="url(#gradient)" d="M 50, 50 m -45, 0 a 45,45 0 1,1 90,0 a 45,45 0 1,1 -90,0"/>
+                                <defs>
+                                    <linearGradient id="gradient" gradientTransform="rotate(90)">
+                                        <stop offset="0%" stop-color="#3b82f6" />
+                                        <stop offset="100%" stop-color="#93c5fd" />
+                                    </linearGradient>
+                                </defs>
+                            </svg>
+                            <div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+                                <p class="font-bold text-xl text-blue-600">增長飛輪</p>
+                                <p class="text-xs text-gray-500 mt-1">Growth Flywheel</p>
+                            </div>
+                            <div class="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 bg-white px-2 rounded text-xs shadow">部署設備</div>
+                            <div class="absolute right-0 top-1/2 -translate-y-1/2 translate-x-4 bg-white px-2 rounded text-xs shadow">成功案例</div>
+                            <div class="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 bg-white px-2 rounded text-xs shadow">擴大部署</div>
+                            <div class="absolute left-0 top-1/2 -translate-y-1/2 -translate-x-4 bg-white px-2 rounded text-xs shadow">品牌信任</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Slide 8: 競爭格局 -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">競爭格局：品質優先 vs. 多樣性優先</h2>
+                <p class="mt-4 text-lg text-gray-600">我們的策略並非在同一維度上與對手進行消耗戰，而是透過開創一個全新的市場象限來取得勝利。</p>
+                <div class="overflow-x-auto mt-6">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th></th>
+                                <th class="text-center">人力輔助</th>
+                                <th class="text-center">全自動化 (無人)</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="font-bold">高品質 (新鮮現煮)</td>
+                                <td class="text-center">傳統高端手搖飲品牌</td>
+                                <td class="text-center bg-blue-100 text-blue-800 font-bold">食機智慧 (FoodTech)</td>
+                            </tr>
+                            <tr>
+                                <td class="font-bold">多樣性 (糖漿基底)</td>
+                                <td class="text-center">百睿達 (Botrista)</td>
+                                <td class="text-center">其他傳統自動販賣機</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="mt-6 bg-gray-50 p-4 rounded-lg">
+                    <h3 class="font-bold text-lg text-gray-900">我們的策略定位：</h3>
+                    <p class="mt-2 text-gray-700">我們不與 Botrista 在「多樣性」上正面交鋒。我們開創了一個專注於<strong class="text-blue-600">「品質」與「全自動化」</strong>的全新象限，直接回應了市場最核心的兩大痛點：不可控的人力危機，以及消費者對健康、高品質產品的迫切需求。</p>
+                </div>
+            </div>
+            
+            <!-- Slide 9: 創始團隊 -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">創始團隊：工程與商業的交響樂</h2>
+                <p class="mt-6 text-lg text-gray-600">在所有競爭優勢中，我們最核心、最難以複製的資產，正是創始團隊的構成。</p>
+                <div class="mt-6 grid md:grid-cols-2 gap-8">
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl text-gray-900">執行長 陳崑元</h3>
+                        <p class="font-semibold text-blue-600">平台架構師 & 商業策略家</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                            <li>豐富的數位平台創業經驗 (光穹遊戲、閃動格子)。</li>
+                            <li>具備從零到一打造平台、獲取用戶並成功推向國際市場的直接經驗。</li>
+                            <li>擅長將複雜技術轉譯為具吸引力的商業價值。</li>
+                        </ul>
+                    </div>
+                    <div class="bg-gray-50 p-4 rounded-lg">
+                        <h3 class="font-bold text-xl text-gray-900">技術長 廖育烽</h3>
+                        <p class="font-semibold text-blue-600">可靠性工程師 & 餐飲現實主義者</p>
+                        <ul class="list-disc list-inside mt-2 text-gray-700 space-y-1">
+                            <li>長達十年的台積電研發資歷 (ASML EUV)。</li>
+                            <li>具備親身經營日式餐廳的實戰經驗。</li>
+                            <li>對餐飲業的真實痛點有切膚之痛的理解。</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="mt-8 bg-blue-50 border-l-4 border-blue-500 p-4 rounded-r-lg">
+                    <h3 class="font-bold text-lg text-gray-900">協同效應：</h3>
+                    <p class="mt-1 text-gray-800"><strong class="text-blue-700">「懂產品、會創新、能落地」</strong>的黃金組合，確保了技術的先進性與市場需求的精準對接，是我們將宏大願景轉化為商業現實的最強大執行力。</p>
+                </div>
+            </div>
+
+            <!-- Slide 10: 財務預測 (視覺強化) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">財務預測亮點</h2>
+                <p class="mt-6 text-lg text-gray-600">本財務預測基於務實的部署里程碑，核心在於展示商業模式的健康度與規模化潛力。</p>
+                 <!-- 新增柱狀圖 -->
+                <div class="mt-8">
+                    <h3 class="text-center font-bold text-xl text-gray-800">累計部署數增長預測</h3>
+                    <div class="flex justify-around items-end mt-4 h-48 p-4 bg-gray-50 rounded-lg">
+                        <div class="text-center">
+                            <p class="font-bold text-lg">15</p>
+                            <div class="w-16 md:w-20 bg-blue-300 rounded-t-lg" style="height: 15%;"></div>
+                            <p class="text-sm font-semibold mt-1">第一年</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-lg">100</p>
+                            <div class="w-16 md:w-20 bg-blue-400 rounded-t-lg" style="height: 50%;"></div>
+                            <p class="text-sm font-semibold mt-1">第二年</p>
+                        </div>
+                        <div class="text-center">
+                            <p class="font-bold text-lg">350+</p>
+                            <div class="w-16 md:w-20 bg-blue-600 rounded-t-lg" style="height: 100%;"></div>
+                            <p class="text-sm font-semibold mt-1">第三年</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-6 text-center text-lg text-blue-600 font-bold">
+                    <p>單機硬體資本回收期：&lt; 9 個月</p>
+                </div>
+            </div>
+
+            <!-- Slide 11: 募資計畫 (視覺強化) -->
+            <div class="slide">
+                <h2 class="text-3xl font-bold text-gray-800 border-b-4 border-blue-500 pb-2">募資計畫：種子輪</h2>
+                <div class="mt-8 grid md:grid-cols-2 gap-8 items-center">
+                    <!-- 左側文字 -->
+                    <div class="space-y-6 text-lg text-gray-700">
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">募資金額</h3>
+                            <p class="text-2xl font-bold text-blue-600 mt-1">新台幣 2,000 萬元</p>
+                            <p class="text-lg text-gray-500">(約 $650K 美元)</p>
+                        </div>
+                        <div>
+                            <h3 class="font-bold text-xl text-gray-900">本輪目標</h3>
+                            <p class="mt-2">以數據系統性地解除商業模式風險，為 A 輪融資奠定堅實基礎。</p>
+                        </div>
+                    </div>
+                    <!-- 右側圖表 -->
+                    <div class="flex flex-col items-center">
+                        <h3 class="font-bold text-xl text-gray-900 mb-4">資金用途分配</h3>
+                        <svg width="200" height="200" viewBox="0 0 100 100">
+                            <!-- Pie slices -->
+                            <circle r="25" cx="50" cy="50" fill="transparent" stroke="#3b82f6" stroke-width="50" stroke-dasharray="calc(40 * 3.14159 * 50 / 100) calc(3.14159 * 50)"></circle>
+                            <circle r="25" cx="50" cy="50" fill="transparent" stroke="#60a5fa" stroke-width="50" stroke-dasharray="calc(35 * 3.14159 * 50 / 100) calc(3.14159 * 50)" transform="rotate(-144, 50, 50)"></circle>
+                            <circle r="25" cx="
